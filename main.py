@@ -27,28 +27,31 @@ def afficherinfopersonne(nom, prenom, age):
     print("l'an prochain, t'aura " + str(age + 1) + " ans")
     if age == 1 or age == 2 or age==3:
         print("vous etes bebe")
-    elif 3 < age > 17 :
+    elif 3 < age < 17:
         print("vous etes enfant")
     elif age == 17:
         print("vous etes presque majeur")
     elif age == 18:
         print("vous etes tout just majeur")
+    elif age > 60:
+        print("vous etes senior")
     elif age <= 18:
         print("vous etes mineur")
     elif age >= 18:
         print("vous etes  majeur")
 
+n = input("vous etes combien :")
+for i in range(int(n)):
+    nom = demandernom()
 
-nomm1 = demandernom()
-nomm2 = demandernom()
-prenomm1 = demanderprenom(nomm1)
-prenomm2 = demanderprenom(nomm2)
-agee1 = demanderage(nomm1)
-agee2 = demanderage(nomm2)
-afficherinfopersonne(nomm1, prenomm1, agee1)
-afficherinfopersonne(nomm2, prenomm2, agee2)
+    prenom = demanderprenom(nom)
 
-print(agee1, 20, agee2, "toto")
+    age= demanderage(nom)
+
+    afficherinfopersonne(nom, prenom, age)
+
+
+
 
 
 """
