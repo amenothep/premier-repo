@@ -9,7 +9,7 @@ class personne:
         if self.age == 0:
             print("bonjour je m'appele " + self.nom)
         else:
-            print("bonjour je m'appele " + self.nom + "et mon age est : " + str(self.age) + " ans")
+            print("bonjour je m'appele " + self.nom + " et mon age est : " + str(self.age) + " ans")
             if self.estmajeur():
                 print ("je suis majeur")
             else :
@@ -25,7 +25,7 @@ personne1 = personne("toto", 10)
 personne1.sepresenter()
 
 
-personne2 = personne("titi", 30)
+personne2 = personne("titi", 0)
 personne2.sepresenter()
 
 personne3 =personne("", 30)
